@@ -46,7 +46,10 @@
   margin: 0 10px;
 }
 
-.cryw0rks-window .cry-home ul li a, .cryw0rks-window .cry-home ul li a:visited, .cryw0rks-window .cry-home ul li a:link, .cryw0rks-window .cry-home ul li a:hover {
+.cryw0rks-window .cry-home ul li a,
+.cryw0rks-window .cry-home ul li a:visited,
+.cryw0rks-window .cry-home ul li a:link,
+.cryw0rks-window .cry-home ul li a:hover {
   text-decoration: none;
   color: #222222;
   background: #ffffff;
@@ -56,19 +59,31 @@
   display: block;
 }
 
-.cryw0rks-window .cry-home ul li:nth-child(1) a, .cryw0rks-window .cry-home ul li:nth-child(1) a:visited, .cryw0rks-window .cry-home ul li:nth-child(1) a:link, .cryw0rks-window .cry-home ul li:nth-child(1) a:hover {
+.cryw0rks-window .cry-home ul li:nth-child(1) a,
+.cryw0rks-window .cry-home ul li:nth-child(1) a:visited,
+.cryw0rks-window .cry-home ul li:nth-child(1) a:link,
+.cryw0rks-window .cry-home ul li:nth-child(1) a:hover {
   background: #FFCDCD;
 }
 
-.cryw0rks-window .cry-home ul li:nth-child(2) a, .cryw0rks-window .cry-home ul li:nth-child(2) a:visited, .cryw0rks-window .cry-home ul li:nth-child(2) a:link, .cryw0rks-window .cry-home ul li:nth-child(2) a:hover {
+.cryw0rks-window .cry-home ul li:nth-child(2) a,
+.cryw0rks-window .cry-home ul li:nth-child(2) a:visited,
+.cryw0rks-window .cry-home ul li:nth-child(2) a:link,
+.cryw0rks-window .cry-home ul li:nth-child(2) a:hover {
   background: #D9FFCD;
 }
 
-.cryw0rks-window .cry-home ul li:nth-child(3) a, .cryw0rks-window .cry-home ul li:nth-child(3) a:visited, .cryw0rks-window .cry-home ul li:nth-child(3) a:link, .cryw0rks-window .cry-home ul li:nth-child(3) a:hover {
+.cryw0rks-window .cry-home ul li:nth-child(3) a,
+.cryw0rks-window .cry-home ul li:nth-child(3) a:visited,
+.cryw0rks-window .cry-home ul li:nth-child(3) a:link,
+.cryw0rks-window .cry-home ul li:nth-child(3) a:hover {
   background: #FFCDF3;
 }
 
-.cryw0rks-window .cry-home ul li:nth-child(4) a, .cryw0rks-window .cry-home ul li:nth-child(4) a:visited, .cryw0rks-window .cry-home ul li:nth-child(4) a:link, .cryw0rks-window .cry-home ul li:nth-child(4) a:hover {
+.cryw0rks-window .cry-home ul li:nth-child(4) a,
+.cryw0rks-window .cry-home ul li:nth-child(4) a:visited,
+.cryw0rks-window .cry-home ul li:nth-child(4) a:link,
+.cryw0rks-window .cry-home ul li:nth-child(4) a:hover {
   background: #CDE8FF;
 }
 </style>
@@ -76,7 +91,7 @@
 <script>
 export default {
     mounted () {
-        var audio = new Audio(require('../assets/intro.mp3')); // path to file
+        var audio = new Audio(require('../assets/intro.mp3'));
         audio.play();
     } 
 };
