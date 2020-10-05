@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     async getData() {
-      const data = await axios.get(`/data/portfolio.json`);
+      const data = await axios.get(`https://raw.githubusercontent.com/cryw0rks/website/master/public/data/portfolio.json`);
       this.dataPortfolio = data.data;
     },
   },
