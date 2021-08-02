@@ -1,0 +1,32 @@
+<div class="container cry-section cry-section-project">
+    <div class="container-inside">
+        <div class="col-12">
+            <h1>project</h1>
+        </div>
+    </div>
+    <div class="container-inside">
+        {% for project in project %}
+        <div class="col-6 project-list-master">
+            <a class="project-list-link" href="/project/{{ project.slug  }}">
+                <div class="project-list" style="background-image: url('/{{ project.thumbnail }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+                    <div class="project-list-overlay"></div>
+                    <div class="project-list-inside">
+                        <span class="project-list-title">{{ project.title }}</span>
+                        <span class="project-list-type">{{ project.get_work_type_display }} | {{ project.get_project_type_display }}</span>
+                        <span class="project-list-date">{{ project.work_year }}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="container-inside">
+        {% if show_view_all %}
+        <div class="col-12">
+            <a class="project-list-link-view-all" href="/project">
+                View All
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>

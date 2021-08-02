@@ -1,0 +1,23 @@
+<div class="container cry-section cry-section-service">
+    <div class="container-inside">
+        <div class="col-12">
+            <h1>service</h1>
+        </div>
+    </div>
+    <div class="container-inside">
+        {% for service in service %}
+        <div class="col-4 service-list-master">
+            <div class="service-list">
+                <div class="service-list-icon">
+                    <i class="{{ service.logo_fa }}"></i>
+                </div>
+                <h3 class="service-list-title">{{ service.title }}</h3>
+                <p class="service-list-description">{{ service.description }}</p>
+                <a href="service/{{ service.slug  }}" class="service-list-button">
+                    more detail
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

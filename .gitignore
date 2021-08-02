@@ -1,7 +1,14 @@
 .DS_Store
 node_modules
 /dist
+website/__pycache__
+blog/__pycache__
+blog/migrations/__pycache__
+venv
+storage/banner
+storage/image
 
+db.sqlite3
 
 # local env files
 .env.local

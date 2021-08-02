@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'banner_page.html' with page_title="project" %}
+
+<div class="container cry-section cry-section-project-detail">
+    <div class="container-inside">
+        <div class="col-12">
+            <h1>{{ project.title }}</h1>
+        </div>
+    </div>
+    <div class="container-inside">
+        <div class="col-12">
+            <img src="/{{ project.thumbnail }}" width="100%">
+        </div>
+        <div class="col-3">
+            <h2 class="cry-section-project-detail-title">project story</h2>
+            <div class="custom-table">
+                <div class="custom-table-tr">
+                    <div class="custom-table-td">
+                        client
+                    </div>
+                    <div class="custom-table-td">
+                        {{ project.get_work_type_display }}
+                    </div>
+                </div>
+
+                <div class="custom-table-tr">
+                    <div class="custom-table-td">
+                        service
+                    </div>
+                    <div class="custom-table-td">
+                        {{ project.get_project_type_display }}
+                    </div>
+                </div>
+
+                <div class="custom-table-tr">
+                    <div class="custom-table-td">
+                        working
+                    </div>
+                    <div class="custom-table-td">
+                        {{ project.work_year }}
+                    </div>
+                </div>
+            </div>
+            <a class="cry-section-project-detail-button" href="{{ project.url }}" target="_blank">view project</a>
+        </div>
+
+        <div class="col-9">
+            <div class="cry-section-project-detail-content">
+                {% autoescape off %}
+                    {{ project.content }}
+                {% endautoescape %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
