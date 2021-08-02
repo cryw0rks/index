@@ -1,24 +1,5 @@
 # website
 
-## Project setup
-```
-npm install
-```
+front-end and back-end cryw0rks site, using django framework
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://cryw0rks.ba-ka.org/

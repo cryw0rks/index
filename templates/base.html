@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cryw0rks</title>
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon/master.ico' %}">
+    <style>
+        @font-face {
+            font-family: 'NotoSans';
+            src: url('{% static "font/Noto_Sans/NotoSans-Regular.ttf" %}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'NotoSans';
+            src: url('{% static "font/Noto_Sans/NotoSans-Italic.ttf" %}') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'NotoSans';
+            src: url('{% static "font/Noto_Sans/NotoSans-Bold.ttf" %}') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'NotoSans';
+            src: url('{% static "font/Noto_Sans/NotoSans-BoldItalic.ttf" %}') format('truetype');
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+{% if theme_dark %}
+<body class="dark-mode">
+{% else %}
+<body>
+{% endif %}
+    <header>
+        <div class="container">
+            <a class="header-logo" href="{% url 'home' %}">
+                <img class="header-logo-dark" src="{% static 'img/logo.png' %}" alt="cryw0rks logo">
+                <img class="header-logo-light" src="{% static 'img/logo-white.png' %}" alt="cryw0rks logo">
+                <!-- <span>クライワークス</span> -->
+            </a>
+
+            <div class="menu-mobile" onclick="return showMobileMenu()"> <span></span> </div>
+
+            <div class="header-menu">
+                <ul>
+                    <li>
+                        <a href="/service">service</a>
+                    </li>
+                    <!-- 
+                    <li>
+                        <a>
+                            game
+                        </a>
+                        <ul>
+                            <li><a href="https://gip.ba-ka.org/">GHOST ID Project</a></li>
+                        </ul>
+                    </li>
+                     -->
+                    <li>
+                        <a href="/project">project</a>
+                    </li>
+                    <li>
+                        <a href="/contact">contact</a>
+                    </li>
+                    <li>
+                        {% if theme_dark %}
+                        <a onclick="return darkModeFunc()"><i id="darkModeIcon" class="fas fa-sun"></i></a>
+                        {% else %}
+                        <a onclick="return darkModeFunc()"><i id="darkModeIcon" class="fas fa-moon"></i></a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="text-center">code &amp; chill :)</p>
+            <p class="text-center">copyrights &copy; 2019 - 2021 cryw0rks, build with <!--&#128187;-->&lt;3, powered by <a href="https://ba-ka.org">ba-ka.org</a></p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="{% static 'js/cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

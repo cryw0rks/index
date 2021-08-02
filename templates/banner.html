@@ -1,0 +1,42 @@
+<div class="cry-banner">
+    {% for banner in banner %}
+    <div class="cry-banner-slide cry-banner-fade">
+        <div style="background: url('{{ banner.thumbnail }}'); background-position: center; background-size: cover; background-repeat: no-repeat; "
+            class="cry-banner-image">
+            <div class="cry-banner-text">
+                <div class="container">
+                    <h3>{{ banner.title }}</h3><span>{{ banner.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <a class="cry-banner-prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="cry-banner-next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+// slider
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("cry-banner-slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+</script>

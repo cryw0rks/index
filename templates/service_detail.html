@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'banner_page.html' with page_title="project" %}
+
+<div class="container cry-section cry-section-service-detail">
+    <div class="container-inside">
+        <div class="col-12">
+            <h1>{{ service.title }}</h1>
+        </div>
+    </div>
+    <div class="container-inside">
+        <div class="col-12">
+            <div class="cry-section-service-detail-icon">
+                <i class="{{ service.logo_fa }}"></i>
+            </div>
+        </div>
+        <div class="col-3">
+            <h2 class="cry-section-service-detail-title">service story</h2>
+            <p>{{ service.description }}</p>
+        </div>
+        <div class="col-9">
+            <div class="cry-section-service-detail-content">
+                {% autoescape off %}
+                    {{ service.content }}
+                {% endautoescape %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
