@@ -514,22 +514,18 @@ main a:hover {
 
 
 
-.cry-section:nth-child(1) h1,
-.cry-section:nth-child(2) h1 {
-  text-align: left;
-}
 
 .cry-section:nth-child(1) h1,
 .cry-section:nth-child(2) h1,
-.cry-section:nth-child(3) h1,
-.cry-section:nth-child(4) h1{
+.cry-section:nth-child(3) h1{
+  text-align: left;
+}
+
+.cry-section h1 {
   position: relative;
 }
 
-.cry-section:nth-child(1) h1:after,
-.cry-section:nth-child(2) h1:after,
-.cry-section:nth-child(3) h1:after,
-.cry-section:nth-child(4) h1:after{
+.cry-section h1:after {
   position: absolute;
   content: " ";
   background: #222222;
@@ -538,29 +534,31 @@ main a:hover {
 }
 
 .cry-section:nth-child(1) h1:after,
-.cry-section:nth-child(2) h1:after {
+.cry-section:nth-child(2) h1:after,
+.cry-section:nth-child(3) h1:after {
   left: 0;
   width: 50px;
 }
 
-.cry-section:nth-child(3) h1:after {
+.cry-section:nth-child(4) h1:after {
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
 }
 
-.cry-section:nth-child(4) h1:after {
+.cry-section:nth-child(5) h1:after {
   right: 0;
   width: 50px;
 }
 
-.cry-section:nth-child(3) h1 {
+.cry-section:nth-child(4) h1 {
   text-align: center;
 }
 
-.cry-section:nth-child(4) h1 {
+.cry-section:nth-child(5) h1 {
   text-align: right;
 }
+
 
 
 .cry-banner-page-image {
